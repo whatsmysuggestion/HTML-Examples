@@ -1,0 +1,22 @@
+ <html>
+ <script>
+ a=1;
+ function display()
+ {
+ 
+ if (typeof(Storage) !== "undefined") {
+ 
+    localStorage.setItem("temp", a++);
+ 
+    document.getElementById("result").innerHTML =localStorage.getItem("temp");
+} else {
+    document.getElementById("result").innerHTML = 
+	"Sorry, your browser does not support Web Storage...";
+}
+}
+</script>
+<body>
+<button onClick="display()">ClickMe</button>
+<div id="result"></div>
+</body>
+</html>
